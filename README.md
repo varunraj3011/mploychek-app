@@ -38,3 +38,9 @@ Frontend runs on http://localhost:4200
 |---------|----------|------|
 | admin | admin123 | Admin |
 | varun | varun123 | General User |
+| john | john123 | General User|
+| sarah | sarah123 | General User |
+| mike | mike123 |  General User |
+| emma | emma123 |  General User |
+| alex | alex123 |  General User |
+
