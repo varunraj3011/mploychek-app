@@ -1,0 +1,41 @@
+<div class="dashboard-wrapper">
+
+<div class="top-bar">
+  <h2>MPloyChek</h2>
+  <div>
+    <button *ngIf="user?.role === 'Admin'" (click)="router.navigate(['/admin'])">Admin Panel</button>
+    <button (click)="logout()">Logout</button>
+  </div>
+</div>
+  <div class="user-card" *ngIf="user">
+    <h3>Welcome, {{ user.userid }}</h3>
+    <p>Role: {{ user.role }}</p>
+  </div>
+
+  <div class="records-section">
+    <h4>My Records</h4>
+
+    <div class="loading" *ngIf="isLoadingRecords">
+      Loading records...
+    </div>
+
+    <table *ngIf="!isLoadingRecords">
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Title</th>
+          <th>Status</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let record of records">
+          <td>{{ record.id }}</td>
+          <td>{{ record.title }}</td>
+          <td>{{ record.status }}</td>
+        </tr>
+      </tbody>
+    </table>
+
+  </div>
+
+</div>

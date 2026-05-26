@@ -1,0 +1,30 @@
+<div class="login-wrapper">
+  <div class="login-card">
+
+    <h2>MPloyChek</h2>
+    <p>Sign in to your account</p>
+
+    <div class="field">
+      <label>User ID</label>
+      <input type="text" [(ngModel)]="loginData.userid" placeholder="Enter your user ID" />
+    </div>
+
+    <div class="field">
+      <label>Password</label>
+      <input type="password" [(ngModel)]="loginData.password" placeholder="Enter your password" />
+    </div>
+
+    <div class="field">
+      <label>Role</label>
+      <select [(ngModel)]="loginData.role">
+        <option>General User</option>
+        <option>Admin</option>
+      </select>
+    </div>
+
+<button (click)="onLogin()" [disabled]="isLoading">
+  {{ isLoading ? 'Signing in...' : 'Sign In' }}
+</button>
+<p style="color:red; font-size:13px;">{{ errorMessage }}</p>
+  </div>
+</div>
