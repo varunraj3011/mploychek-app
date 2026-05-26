@@ -18,14 +18,36 @@ const users = [
     userid: 'varun',
     password: 'varun123',
     role: 'General User'
-  }
+  },
+    {
+    id: '3',
+    userid: 'john',
+    password: 'john123',
+    role: 'General User'
+  },
+  { id: '4', userid: 'sarah', password: 'sarah123', role: 'General User' },
+  { id: '5', userid: 'mike',  password: 'mike123',  role: 'General User' },
+  { id: '6', userid: 'emma',  password: 'emma123',  role: 'General User' },
+  { id: '7', userid: 'alex',  password: 'alex123',  role: 'General User' }
 ];
 const records = [
-  { id: '1', title: 'Background Check',   status: 'Completed', userid: 'varun' },
-  { id: '2', title: 'Document Verify',    status: 'Pending',   userid: 'varun' },
-  { id: '3', title: 'Employment Check',   status: 'Completed', userid: 'admin' },
-  { id: '4', title: 'Criminal Record',    status: 'In Progress',userid: 'admin' },
-  { id: '5', title: 'Reference Check',    status: 'Completed', userid: 'varun' },
+  { id: '1',  title: 'Background Check',      status: 'Completed',    userid: 'varun' },
+  { id: '2',  title: 'Document Verify',       status: 'Pending',      userid: 'varun' },
+  { id: '3',  title: 'Employment Check',      status: 'Completed',    userid: 'admin' },
+  { id: '4',  title: 'Criminal Record',       status: 'In Progress',  userid: 'admin' },
+  { id: '5',  title: 'Reference Check',       status: 'Completed',    userid: 'varun' },
+
+  { id: '6',  title: 'Address Verification',  status: 'Pending',      userid: 'john' },
+  { id: '7',  title: 'Education Check',       status: 'Completed',    userid: 'john' },
+  { id: '8',  title: 'Identity Verification', status: 'In Progress',  userid: 'sarah' },
+  { id: '9',  title: 'Bank Statement Check',  status: 'Completed',    userid: 'sarah' },
+  { id: '10', title: 'Credit Score Review',   status: 'Pending',      userid: 'mike' },
+
+  { id: '11', title: 'Passport Validation',   status: 'Completed',    userid: 'mike' },
+  { id: '12', title: 'Police Clearance',      status: 'In Progress',  userid: 'emma' },
+  { id: '13', title: 'Drug Test Review',      status: 'Completed',    userid: 'emma' },
+  { id: '14', title: 'Experience Validation', status: 'Pending',      userid: 'alex' },
+  { id: '15', title: 'Salary Verification',   status: 'Completed',    userid: 'alex' }
 ];
 
 app.post('/api/login', (req, res) => {
